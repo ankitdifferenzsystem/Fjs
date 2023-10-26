@@ -28,21 +28,23 @@ class FeatherJsError implements Exception {
   String get message => (error?.toString() ?? '');
 
   @override
-  String toString() {
-    var msg = 'FeatherJsError [$type]: $message';
-    if (_stackTrace != null) {
-      msg += '\n$stackTrace';
-    }
-    var data = parseCustomMap(msg);
-    return data.toString();
-  }
+  // String toString() {
+  //   var msg = 'FeatherJsError [$type]: $message';
+  //   if (_stackTrace != null) {
+  //     msg += '\n$stackTrace';
+  //   }
+  //   var data =   parseCustomMap(msg);
+  //   return data.toString();
+  // }
 
 
-  Map<String, dynamic> parseCustomMap(String input) {
+  Map<String, dynamic> parseCustomMap() {
+print("calllll0000----");
     Map<String, dynamic> result = {};
+    var  data ='FeatherJsError [$type]: $message';
 
     // Remove curly braces from the input
-    input = input.replaceAll('{', '').replaceAll('}', '');
+    data.replaceAll('{', '').replaceAll('}', '');
 
     // Split the input by ',' to separate key-value pairs
     List<String> keyValuePairs = input.split(', ');
@@ -91,7 +93,7 @@ Map<String, dynamic> parseCustomMap(String input) {
       result[key] = value;
     }
   }
-
+print("calllll0000---- retrn---${result}");
   return result;
 }
 
