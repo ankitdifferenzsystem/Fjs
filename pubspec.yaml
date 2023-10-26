@@ -1,0 +1,21 @@
+name: flutter_feathersjs
+description: Real-Time Flutter Apps, Powered by FeathersJS.
+version: 4.1.5
+homepage: https://github.com/Dahkenangnon/flutter_feathersjs.dart
+repository: https://github.com/Dahkenangnon/flutter_feathersjs.dart
+documentation: https://feathersjs.dah-kenangnon.com/
+issue_tracker: https://github.com/Dahkenangnon/flutter_feathersjs.dart/issues
+
+
+environment:
+  sdk: '>=2.12.1 <4.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  socket_io_client: ^2.0.1
+  dio: ^5.1.1
+  json_bridge: ^0.0.4
+  event_bus: ^2.0.0
+dev_dependencies:
+  flutter_test:
+    sdk: flutter

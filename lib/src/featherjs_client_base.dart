@@ -1,0 +1,3 @@
+class FlutterFeathersjsBase {}
+
+class FlutterFeathersjsClient {}
